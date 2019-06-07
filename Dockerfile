@@ -8,4 +8,4 @@ RUN apt update && \
     apt install software-properties-common -y && \
     apt-add-repository ppa:ansible/ansible -y && \
     apt update && \
-    apt install ansible -y
+    apt install sshpass ansible -y

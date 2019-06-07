@@ -5,6 +5,7 @@ services:
     command: /bin/bash
     volumes:
       - $PWD:/ops/kube-cluster
+      - $PWD/ssh:/root/.ssh
     working_dir: /ops/kube-cluster
     stdin_open: true
     tty: true
