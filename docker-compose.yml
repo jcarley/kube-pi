@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  shell:
+    build: .
+    command: /bin/bash
+    volumes:
+      - $PWD:/ops/kube-cluster
+    working_dir: /ops/kube-cluster
+    stdin_open: true
+    tty: true
+

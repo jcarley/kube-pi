@@ -1,0 +1,13 @@
+[masters]
+master ansible_host=10.0.0.39 ansible_user=pi
+
+[workers]
+worker1 ansible_host=10.0.0.40 ansible_user=pi
+worker2 ansible_host=10.0.0.41 ansible_user=pi
+worker3 ansible_host=10.0.0.42 ansible_user=pi
+worker4 ansible_host=10.0.0.43 ansible_user=pi
+worker5 ansible_host=10.0.0.44 ansible_user=pi
+worker6 ansible_host=10.0.0.45 ansible_user=pi
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
