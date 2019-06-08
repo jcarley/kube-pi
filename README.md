@@ -19,6 +19,12 @@ $ ansible-playbook -i hosts /ops/kube-cluster/master.yml
 $ ansible-playbook -i hosts /ops/kube-cluster/workers.yml
 ```
 
+Verify the cluster.  This may take awhile.
+```
+ssh ubuntu@master
+kubectl get nodes -o wide
+```
+
 Reference
 
 -https://www.digitalocean.com/community/tutorials/how-to-create-a-kubernetes-cluster-using-kubeadm-on-ubuntu-18-04
