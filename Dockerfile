@@ -5,7 +5,7 @@ ENV TERM xterm
 
 RUN apt update && \
     apt upgrade -y && \
-    apt install software-properties-common -y && \
+    apt install iputils-ping software-properties-common -y && \
     apt-add-repository ppa:ansible/ansible -y && \
     apt update && \
     apt install sshpass ansible -y
