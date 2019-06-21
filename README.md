@@ -35,7 +35,7 @@ $ ansible-playbook -i hosts /ops/kube-cluster/workers.yml
 
 Verify the cluster.  This may take awhile.
 ```
-ssh ubuntu@master
+ssh ubuntu@<master ip address>
 kubectl get nodes -o wide
 ```
 
