@@ -9,9 +9,23 @@ Usage:
 $ docker-compose run --rm shell
 ```
 
+Verify hosts are ready
+
+```
+$./ping.sh
+```
+
+If the ping script reveals that the hosts are responding, then we can setup ssh keys.
+
 ```
 $ cd /ops/kube-cluster
 $ ./setuphosts.sh
+```
+
+Now run the ansible playbooks to install and setup k8s.
+
+```
+$ cd /ops/kube-cluster
 $ ansible-playbook -i hosts /ops/kube-cluster/initial.yml
 $ ansible-playbook -i hosts /ops/kube-cluster/docker.yml
 $ ansible-playbook -i hosts /ops/kube-cluster/kube-dependencies.yml
