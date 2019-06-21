@@ -39,6 +39,19 @@ ssh ubuntu@<master ip address>
 kubectl get nodes -o wide
 ```
 
+To shutdown all the hosts.
+
+```
+$ ansible-playbook -i hosts /ops/kube-cluster/shutdown.yml
+```
+
+Cleanup your local docker container and image.  Exit out of the docker shell,
+and the run the following docker-compose command.
+
+```
+$ docker-compose down -v --rmi local
+```
+
 Reference
 
 -https://www.digitalocean.com/community/tutorials/how-to-create-a-kubernetes-cluster-using-kubeadm-on-ubuntu-18-04
